@@ -31,12 +31,13 @@ void bubbleSortMatrix(int *ptr, int size) {
 }
 
 int main() {
-	int rows = 3;
+	int rows = 4;
 	int cols=4;
-	int matrix[3][4] = {
-		{12,5,8,3},
-		{7,1,9,4},
-		{6,2,10,11}
+	int matrix[4][4] = {
+		{25,51,2,53},
+		{37,5,9,28},
+		{26,28,67,21},
+		{19, 45,32,42}
 	};
 
 	int size=rows*cols;
