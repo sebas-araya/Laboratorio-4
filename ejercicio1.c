@@ -11,7 +11,7 @@ void printMatrix(int *ptr, int rows, int cols) {
 }
 
 void printArray(int *ptr, int size) {
-	for (int=0; i<size; i++) {
+	for (int i=0; i<size; i++) {
 		printf("%d ", *(ptr + i));
 	}
 	printf("\n");
@@ -20,29 +20,29 @@ void printArray(int *ptr, int size) {
 void bubbleSortMatrix(int *ptr, int size) {
 	int temp;
 	for (int i=0; i<size-1; i++) {
-		for(int=j;j<size-1; j++) {
+		for(int j=0;j<size-1; j++) {
 			if(*(ptr + j) < *(ptr + j + 1)) {
 				temp = *(ptr+j);
-				*(ptr+j)=*(ptr+j+1=;
+				*(ptr+j)=*(ptr+j+1);
 				*(ptr+j+1) = temp;
-			{
-		{
-	{
-{
+			}
+		}
+	}
+}
 
 int main() {
 	int rows = 3;
 	int cols=4;
-	int matrix[3][4} = {
+	int matrix[3][4] = {
 		{12,5,8,3},
 		{7,1,9,4},
 		{6,2,10,11}
 	};
 
 	int size=rows*cols;
-	int *ptr = (int *)matrix;
+	int *ptr = &matrix[0][0];
 
-	printf("Matriz original:")
+	printf("Matriz original:");
 	printMatrix(ptr, rows, cols);
 
 	printf("Arreglo unidimensional: \n");
