@@ -42,7 +42,7 @@ int main() {
 	int size=rows*cols;
 	int *ptr = &matrix[0][0];
 
-	printf("Matriz original:");
+	printf("Matriz original: \n");
 	printMatrix(ptr, rows, cols);
 
 	printf("Arreglo unidimensional: \n");
