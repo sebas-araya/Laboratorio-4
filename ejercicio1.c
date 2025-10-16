@@ -46,9 +46,10 @@ int main() {
 	printMatrix(ptr, rows, cols);
 
 	printf("Arreglo unidimensional: \n");
-
+	printArray(ptr, size);
 	bubbleSortMatrix(ptr, size);
 	printf("Arreglo ordenado: \n");
+	printArray(ptr, size);
 	printf("Matriz ordenada: \n");
 	printMatrix(ptr, rows, cols);
 
