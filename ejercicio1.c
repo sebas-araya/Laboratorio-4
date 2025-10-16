@@ -31,4 +31,26 @@ void bubbleSortMatrix(int *ptr, int size) {
 {
 
 int main() {
+	int rows = 3;
+	int cols=4;
+	int matrix[3][4} = {
+		{12,5,8,3},
+		{7,1,9,4},
+		{6,2,10,11}
+	};
 
+	int size=rows*cols;
+	int *ptr = (int *)matrix;
+
+	printf("Matriz original:")
+	printMatrix(ptr, rows, cols);
+
+	printf("Arreglo unidimensional: \n");
+
+	bubbleSortMatrix(ptr, size);
+	printf("Arreglo ordenado: \n");
+	printf("Matriz ordenada: \n");
+	printMatrix(ptr, rows, cols);
+
+	return 0;
+}
