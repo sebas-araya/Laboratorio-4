@@ -3,7 +3,7 @@
 
 void reemplazar_palabras(FILE *file_in, FILE *file_out, const char *encontrar, const char *reemplazar) {
 	char word[256];
-	while (fscanf(file_in, "%s", word) = 1) {
+	while (fscanf(file_in, "%s", word) == 1) {
 		if (strcmp(word, encontrar) == 0) {
 			fputs(reemplazar, file_out);
 		} else {
@@ -20,7 +20,7 @@ int procesar_archivo(const char *input_filename, const char *output_filename, co
 		return 1;
 	}
 
-	FILE *file:out = fopen(output_file, "w");
+	FILE *file_out = fopen(output_filename, "w");
 	if (!file_out) {
 		printf("Error, no se puede crear el archivo");
 		fclose(file_in);
@@ -35,7 +35,7 @@ int procesar_archivo(const char *input_filename, const char *output_filename, co
 
 int main (int argc, char *argv[]) {
 	if (argc != 4) {
-		printf("En el archivo %2 se buscará palabra_a_buscar para reemplazar palabra_reemplazo \n", argc[0]);
+		printf("En el archivo '%s' se buscará palabra_a_buscar para reemplazar palabra_reemplazo \n", argv[0]);
 		return 1;
 	}
 
@@ -44,7 +44,7 @@ int main (int argc, char *argv[]) {
 	const char *reemplazar=argv[3];
 	const char *output_filename = "salida.txt";
 
-	if (proccesar_archivo(input_filename, output_filename, encontrar, reemplazar) == 0) {
+	if (procesar_archivo(input_filename, output_filename, encontrar, reemplazar) == 0) {
 		printf("Reemplazo completo. Resultado en el arvhico '%s' \n", output_filename);
 	}
 	return 0;
