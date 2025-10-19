@@ -19,3 +19,33 @@ int procesar_archivo(const char *input_filename, const char *output_filename, co
 		printf("Error, no se pudo abrir el archivo");
 		return 1;
 	}
+
+	FILE *file:out = fopen(output_file, "w");
+	if (!file_out) {
+		printf("Error, no se puede crear el archivo");
+		fclose(file_in);
+		return 1;
+	}
+
+	reemplazar_palabras(file_in, file_out, encontrar, reemplazar);
+	fclose(file_in);
+	fclose(file_out);
+	return 0;
+}
+
+int main (int argc, char *argv[]) {
+	if (argc != 4) {
+		printf("En el archivo %2 se buscará palabra_a_buscar para reemplazar palabra_reemplazo \n", argc[0]);
+		return 1;
+	}
+
+	const char *input_filename = argv[1];
+	const char *encontrar=argv[2];
+	const char *reemplazar=argv[3];
+	const char *output_filename = "salida.txt";
+
+	if (proccesar_archivo(input_filename, output_filename, encontrar, reemplazar) == 0) {
+		printf("Reemplazo completo. Resultado en el arvhico '%s' \n", output_filename);
+	}
+	return 0;
+}
