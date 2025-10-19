@@ -35,7 +35,7 @@ int procesar_archivo(const char *input_filename, const char *output_filename, co
 
 int main (int argc, char *argv[]) {
 	if (argc != 4) {
-		printf("En el archivo '%s' se buscará palabra_a_buscar para reemplazar palabra_reemplazo \n", argv[0]);
+		printf("El programa se utiliza con el formato: '%s' se buscará palabra_a_buscar para reemplazar palabra_reemplazo. Debe pasar los argumentos\n", argv[0]);
 		return 1;
 	}
 
